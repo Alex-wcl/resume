@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+
+<title>王成龙 – 简历（业务及解决方案）</title>
+
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	
+<style>
+  :root{
+    --bg:#ffffff; --fg:#111; --muted:#666; --accent:#2563eb; --chip:#eef2ff; --line:#e5e7eb;
+    --cn:"-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Microsoft YaHei, Helvetica, Arial, sans-serif";
+  }
+  html,body{background:#f0f0f0;color:var(--fg);font:14px/1.6 var(--cn);margin:0}
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  margin: auto;
+  padding: 10mm;   /* 控制内边距 */
+  background: #fff;
+  box-sizing: border-box;
+  page-break-after: always; /* 打印时强制分页 */
+
+}
+  
+header {
+  display: flex;
+  justify-content: space-between; /* 左右分布 */
+  margin-bottom: 10px;
+  align-items: flex-end;   
+}
+
+header .title {
+  flex: 1; 
+}
+header .meta {
+  margin-top: 5px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+header .avatar {
+  width: 86px;      /* 自行调整大小 */
+  height: 120px;
+  border-radius: 8px; /* 圆形头像 */
+  object-fit: cover;
+  margin-left: 20px;   
+}
+
+.meta {
+    font-size: 14px;
+    color: #555;
+  }
+.meta i {
+  font-size: 14px;       
+  vertical-align: middle; 
+  margin-right: 4px;   
+}
+
+
+.title h1{margin:0;font-size:50px}
+
+.card{padding:12px 0}
+
+.card + .card {
+  border-top: 1px solid var(--line);
+}
+.card.edu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.edu-text {
+  display: grid;
+  grid-template-columns: 180px 160px 90px 100px; /* 按列对齐140+160+60+100 */
+  gap: 8px;
+  flex: 1;
+}
+
+.edu-text span {
+  font-weight: bold;   
+  white-space: nowrap;  /* 不换行 */
+}
+
+.edu-time {
+  white-space: nowrap;
+}
+
+.edu-tag {
+  font-size: 0.75rem;       /* 比正文小一点 */
+  color: #777;              /* 灰色，低调 */
+  margin-left: 6px;         /* 和前面文字留点间距 */
+  border: 1px solid #ccc;   /* 细边框，弱化存在感 */
+  border-radius: 4px;       
+  padding: 1px 4px;         
+}
+
+
+
+.job-header {
+  display: flex;
+  align-items: baseline;   /* 底部对齐更整齐 */
+  gap: 16px;               /* 控制间距 */
+  flex-wrap: wrap;         /* 如果太长自动换行 */
+}
+
+.job-header .company {
+  font-weight: bold;
+  font-size: 1.05rem;
+  margin-right: 12px;
+}
+
+.job-header .when {
+  font-weight: bold;
+  margin-left: auto;
+}
+
+.job-header .sub {
+  font-size: 0.95rem;
+}
+
+.job-field {
+  margin: 4px 0 6px 0;
+  font-size: 0.9rem;
+  color: #444;
+  font-style: italic;  
+}
+
+.skills-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.skills-chart {
+  flex: 1;
+  height: 200px;     /* 高度小一点 */
+  min-width: 0;      
+}
+
+#skillRadar {
+  flex: 0 0 40%;     /* 雷达图只占40%宽度 */
+  height: 200px;     /* 再缩小一些 */
+}
+
+#skillWordCloud {
+  flex: 1;           /* 词云自适应占剩余空间 */
+  height: 200px;
+}
+
+ul.inline-list {
+  display: flex;
+  flex-wrap: wrap;          /* 超长时自动换行 */
+  gap: 20px;                /* 每个 li 之间的间距 */
+  list-style-position: inside; /* 点紧跟文字 */
+  padding-left: 0;          /* 去掉默认左缩进 */
+  margin: 0;
+}
+
+.chip{font-size:12px;background:var(--chip);padding:4px 8px;border-radius:999px;border:1px solid var(--line)}
+
+
+  h2{font-size:16px;margin:18px 0 10px 0;border-left:4px solid var(--accent);padding-left:8px}
+
+  ul{padding-left:18px;margin:8px 0}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .block{margin-bottom:10px;margin-top: 10px;}
+  .linkrow{display:flex;flex-direction:column;gap:6px}
+  
+.collage-logo {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 0px; /* 调整间距 */
+}
+
+.section-title{
+  display: flex;
+  align-items: center;
+  gap: .5rem;             /* 图标与文字间距 */
+  font-size: 1.4rem;      /* 根据版式自行调整 */
+  line-height: 1.2;
+  margin: 1.2rem 0 .6rem;
+  color: #111;            /* 默认深色，便于打印 */
+  font-weight: 700;
+}
+
+.section-title .fa-solid{
+  font-size: 1.1em;       /* 随文字缩放 */
+  width: 1.2em;           /* 视觉上更稳，更不晃 */
+  text-rendering: optimizeLegibility;
+}
+.section-title::after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid var(--accent); /* 加粗 + 用主题色 */
+  margin-left: 0.8rem;                    /* 和文字拉开距离 */
+  opacity: 0.8;                           /* 不会太刺眼 */
+}
+
+
+.highlight {
+  font-weight: 600;
+ /*  text-decoration: underline;*/
+}
+
+
+.case-title {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.5;
+}
+.case-sub {
+  font-weight: 400;
+  color: #555;
+  font-size: 0.95rem;
+  margin-left: 10px;
+}
+
+/* STAR 内容布局 */
+.case-grid {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 8px 16px;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.6;
+}
+.case-label {
+  white-space: nowrap;
+  font-weight: 700;
+  color: #111;
+}
+.case-badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: #eef2ff;
+  font-size: 0.78rem;
+  margin-right: 8px;
+}
+
+.case-result span {
+  font-weight: 600;
+}
+
+
+@page { size: A4; margin: 0; }
+@media print {
+  body {
+    background: #fff !important;   /* 白色背景 */
+  }
+  .page {
+    box-shadow: none !important;  /* 去掉阴影 */
+    border: none !important;      /* 去掉灰色边框 */
+    border-radius: 0 !important;  /* 去掉圆角 */
+    margin: 0 auto;
+  }
+
+}
+  
+</style>
+</head>
+<body>
+
+  <!-- 第1页 -->
+  <div class="page">
+    <header>
+      <div class="title">
+        <h1>王成龙</h1>
+        <div class="meta">
+		  <i class="fa-solid fa-cake-candles" ></i> 1989年10月 ·
+		  <i class="fa-solid fa-envelope"></i>342621891@qq.com ·
+		  <i class="fa-solid fa-phone"></i> 159 6421 1862 ·
+		  <i class="fa-solid fa-briefcase"></i> 12年工作经验 ·
+		  <i class="fa-brands fa-github"></i> 
+		  <a href="https://alex-wcl.github.io/resume/" target="_blank" style="color:inherit; text-decoration:none;">
+			alex-wcl.github.io
+		  </a>
+        </div>
+
+      </div>
+	  <img src="wcl.png" alt="avatar" class="avatar">
+
+    </header>
+
+      <!-- 左栏 -->
+	<main>
+		<h2 class="section-title">
+		  <i class="fa-solid fa-user-graduate" aria-hidden="true"></i>
+		  <span>教育背景</span>
+		</h2>        
+		<div class="card edu">
+		  <img src="SDU.png" alt="山东大学 校徽" class="collage-logo">
+		  <div class="edu-text">
+			<span class="school">山东大学
+				<span class="edu-tag">985计划</span>
+				<span class="edu-tag">双一流</span></span>
+			<span class="major">计算机科学与技术</span>
+			<span class="degree">本科</span>
+			<span class="title">工学学士</span>
+		  </div>
+		  <div class="edu-time"><strong>2008.09 ~ 2012.07</strong></div>
+		</div>
+		
+		<div class="card edu">
+		  <img src="QUT.png" alt="青岛理工大学 校徽" class="collage-logo">
+		  <div class="edu-text">
+			<span class="school">青岛理工大学
+				<span class="edu-tag">111计划</span>
+			</span>
+			<span class="major">计算机科学与技术</span>
+			<span class="degree">硕士</span>
+			<span class="title">工学硕士</span>
+		  </div>
+		  <div class="edu-time"><strong>2014.09 ~ 2016.07</strong></div>
+		</div>
+ 
+		<h2 class="section-title">
+		  <i class="fa-solid fa-briefcase"></i>
+		  <span>工作经验</span>
+		</h2>
+
+		<div class="card job">
+		  <div class="job-header">
+			<strong class="company">青岛海信网络科技股份有限公司</strong>
+			<span class="sub">高级架构工程师 / 产品部长 / 研发总监</span>
+			<span class="when">2018.07 ~ &nbsp;&nbsp;至今&nbsp;&nbsp;&nbsp;</span>
+		  </div>
+		  <div class="job-field">涉及ToG业务领域：智慧交通 · 公共安全 · 智慧安防</div>
+		  <ul>	
+			<li><strong>作为平台软件架构师和产品部长，</strong> 架构
+				<strong title="车辆大数据平台、视频大数据平台、侦查平台、防控平台、安防小区平台、全息感知平台、视频图像综合应用平台、数字证书监管平台、大模型训练平台、122接警助手">
+					10余个大中型平台软件产品</strong>，和
+					<strong title="公安云脑、视图库、可视化数据建模、跨网数据交管、数据态势监控">5个公安大数据中大型平台软件
+				</strong>
+					包括数据流设计、业务流设计、数据库设计及分布式API网关设计，负责产品在
+				<strong title="北京、天津、青岛、烟台、潍坊、镇江、长沙、桂林、贵阳、武汉、通辽">
+					16个地市</strong>
+					实战落地。
+			</li>
+			<!-- <li><strong>作为公安产品部长，</strong> 负责海信智慧公安产品的架构设计工作，采用Spark+Flink+Doris+ES的主流架构，规划架构并开发了
+				<strong title="公安云脑、视图库、可视化数据建模、跨网数据交管、数据态势监控">5个公安大数据中大型平台软件
+				</strong>。负责产品在10余个城市落地验证。
+			</li> -->
+			<li><strong>作为公安交管研发总监，</strong> 负责公安交管大模型研发工作，
+				<strong>架构行业垂域大语言模型；</strong> 引入视觉大模型，<strong>解决道路交通事件发现泛化不足，准确率低的问题；</strong>
+				通过多模态数据特征对齐，<strong>实现数据融合及复杂业务决策推理。</strong>
+			</li>
+		  </ul>
+		  <div class="chips">
+			<span class="chip">公司优秀员工</span>
+			<span class="chip">公司科技标兵</span>
+			<span class="chip">连续4年绩效考评A</span>
+		  </div>
+		</div>
+
+		
+		<div class="card job">
+		  <div class="job-header">
+			<strong class="company">中国联通软件研究院&emsp;&emsp;</strong>
+			<span class="sub">大数据开发工程师 / 大数据架构师</span>
+			<span class="when">2015.08  ~  2018.07</span>
+		  </div>
+		  <div class="job-field">涉及ToB业务领域：CBSS核心计费 · 大数据流式处理</div>
+		  <ul>
+			<li><strong>作为大数据开发工程师，</strong> 基于Logstash+Storm/SparkStreaming+ES+Kafka+Redis，
+				参与开发
+				<strong title="日志分析系统、话单稽核系统、话费稽查系统、数据监控系统">
+					4个大型软件产品</strong>
+				<strong>完成十万条/秒并发量</strong>下的话单实时计算、指标分析，
+				<strong>实现百亿级话单、账管数据分析，支撑全国话单出账。</strong>
+			</li>
+			<li><strong>作为大数据架构师，</strong> 基于Storm+ES+Kafka+Redis，采用Prometheus+Kibana，
+				架构设计开发全国计费全流程监控分析系统，
+				<strong>实现49大类监控历程和1780个监控指标项，实时检测1.3亿用户的数据流状态和异常。</strong>
+			</li>
+		  </ul>
+		  <div class="chips">
+		    <span class="chip">集团优秀新员工</span>
+		  </div>
+		</div>
+		
+		<h2 class="section-title">
+		  <i class="fa-solid fa-wrench"></i>
+		  <span>专业技能</span>
+		</h2>
+		<div class="skills-wrapper">
+		  <div id="skillWordCloud" class="skills-chart"></div>
+		  <div id="skillRadar" class="skills-chart"></div>
+		</div>
+		  
+
+		<h2 class="section-title">
+		  <i class="fa-solid fa-award"></i>
+		  <span>奖项证明</span>
+		</h2>
+        <div class="block">
+		<ul class="inline-list">
+		  <li>山东省科技进步二等奖</li>
+		  <li>青岛市科技进步二等奖</li>
+		  <li>电子学会科技进步二等奖</li>
+		  <li>海信集团创新提案2项</li>
+		</ul>
+		
+        </div>
+	</main>
+  </div>
+
+  <!-- 第2页 -->
+  <div class="page">
+	<h2 class="section-title">
+	  <i class="fa-solid fa-star"></i>
+	  <span>核心优势</span>
+	</h2>
+	
+		<div class="card">
+	  <p class="case-title">
+		架构设计，高效开发的能力
+		<span class="case-sub">敢于打破重来，高效完成系统重构</span>
+	  </p>
+
+	  <div class="case-grid">
+		<div class="case-label"><span class="case-badge">S</span>背景</div>
+		<div>
+			第三方服务众多，业务平台反复开发，代码不一致性导致的缺陷问题排查困难，项目交付质量受限周期长，成本高
+		</div>
+		<div class="case-label"><span class="case-badge">T</span>任务</div>
+		<div>
+			需要从业务和技术入手，抽取公共功能，完成封装，并严格控制访问和数据权限
+		</div>
+		<div class="case-label"><span class="case-badge">A</span>行动</div>
+		<div>
+			<ul style="margin:0; padding-left:18px;">
+				<li>API网关整体设计，包括11个子服务和独立的鉴权和限流技术方案。</li>
+				<li>承担核心限流模块开发，用时1个月完成限流、技术、权限模块的开发和上线。</li>
+				<li>实现研发/生产环境灵活配置，支持快速调用、上线、客户试用等推广场景。</li>
+			</ul>
+		</div>
+		<div class="case-label"><span class="case-badge">R</span>成果</div>
+		<div>
+			整个平台实现<strong>完全独立研发</strong>，整体降低开发成本20%以上，缺陷减少40%。
+		</div>
+	  </div>
+	</div>
+	
+	<div class="card">
+	  <p class="case-title">
+		技术规划，创新突破的能力
+		<span class="case-sub">跨体系创新，攻克难题推动项目进展</span>
+	  </p>
+
+	  <div class="case-grid">
+		<div class="case-label"><span class="case-badge">S</span>背景</div>
+		<div>
+			天网建设中，存在大量的真实人脸抓拍和广告牌抓拍的混杂，导致非活体聚类影响了业务研判。
+		</div>
+		<div class="case-label"><span class="case-badge">T</span>任务</div>
+		<div>
+			设计并实现低成本、可落地的广告牌治理方案，不依赖于人像厂家的人脸算法，实现自主可控。
+		</div>
+		<div class="case-label"><span class="case-badge">A</span>行动</div>
+		<div>
+			<ul style="margin:0; padding-left:18px;">
+				<li>基于切割图模式匹配判断求差异位置中的人脸。</li>
+				<li>基于背景模式判断是否是广告牌人脸。</li>
+				<li>通过无监督学习自我训练，提高适应性，解决误检和漏检。</li>
+			</ul>
+		</div>
+		<div class="case-label"><span class="case-badge">R</span>成果</div>
+		<div>
+			单项目节省<strong>20万</strong>的训练和算法成本；
+			通过持续模型训练，检测准确率<strong>达到99%，</strong>漏检率控制在<strong>3%以内。</strong>
+		</div>
+	  </div>
+	</div>
+
+	
+	<div class="card">
+	  <p class="case-title">
+		研发提效，提升效率的能力
+		<span class="case-sub">用标准化与自动化改造工作流程，显著提升团队工作效率</span>
+	  </p>
+
+	  <div class="case-grid">
+		<div class="case-label"><span class="case-badge">S</span>背景</div>
+		<div>
+			软件架构全面升级，由单业务系统升级到全微服务架构，部署调试成本显著增高，开发效率降低
+		</div>
+		<div class="case-label"><span class="case-badge">T</span>任务</div>
+		<div>
+			需要解决新架构下服务数量多、部署复杂，以及联调过程中频繁升级带来的效率问题。
+		</div>
+		<div class="case-label"><span class="case-badge">A</span>行动</div>
+		<div>
+			<ul style="margin:0; padding-left:18px;">
+				<li>对Spark、Flink、ES、MySQL、CAS、Redis、Nginx 等非业务组件容器化。</li>
+				<li>编写可扩展的部署脚本，遵循“约定优于配置”的原则实现一键部署。</li>
+				<li>引入 Jenkins ，结合 Git 实现代码提交后自动构建、自动部署的 CI/CD 流程。</li>
+			</ul>
+		</div>
+		<div class="case-label"><span class="case-badge">R</span>成果</div>
+		<div>
+			部署步骤由原本20多步简化至<strong>3步</strong>；单个服务调试升级的耗时从15分钟减少到<strong>2分钟</strong>，效率提升<strong>超过85%</strong>。
+		</div>
+	  </div>
+	</div>
+
+	<div class="card">
+	  <p class="case-title">
+		攻坚破难，解决难题的能力
+		<span class="case-sub">快速定位排查、解决复杂问题</span>
+	  </p>
+
+	  <div class="case-grid">
+		<div class="case-label"><span class="case-badge">S</span>背景</div>
+		<div>
+			CBSS核心计费出现11个省市的计费积压，导致联通集团第一季度的账单收入减少30亿元以上。
+		</div>
+		<div class="case-label"><span class="case-badge">T</span>任务</div>
+		<div>
+			需要在24小时内处理积压，保障收入；长期需要在10天内彻底解决问题，不影响下一账期的测试和上线
+		</div>
+		<div class="case-label"><span class="case-badge">A</span>行动</div>
+		<div>
+			<ul style="margin:0; padding-left:18px;">
+				<li>通过指标监控定位问题，采集agent端存在宿主服务器长期高频运行下性能不足隔期假死。</li>
+				<li>扩展多节点并行采集，并平行扩展后续业务并行处理机制，单独划分二次计算池。</li>
+				<li>逐层筛漏积压数据，自动化回检，制定服务器线程方案，优化采集并线上灰度发布。</li>
+			</ul>
+		</div>
+		<div class="case-label"><span class="case-badge">R</span>成果</div>
+		<div>
+			<strong>9小时</strong> 完成问题排查和修复，<strong>8天</strong> 完成多线程和采集Agent并行采集修复，彻底解决问题，后续出账再无发生。
+		</div>
+	  </div>
+	</div>
+
+
+	
+	<div class="card">
+	  <p class="case-title">
+		技术整合，学以致用的能力
+		<span class="case-sub">新业务和技术领域，将学习的理论有效实践落地</span>
+	  </p>
+
+	  <div class="case-grid">
+		<div class="case-label"><span class="case-badge">S</span>背景</div>
+		<div>
+			2024年大模型技术出现，对以往的小模型及大数据挖掘分析推理决策带来了颠覆性的技术改变。
+		</div>
+		<div class="case-label"><span class="case-badge">T</span>任务</div>
+		<div>
+			负责公安交管大模型研发工作，构建大模型驱动的平台软件全面升级。
+		</div>
+		<div class="case-label"><span class="case-badge">A</span>行动</div>
+		<div>
+			<ul style="margin:0; padding-left:18px;">
+				<li>快速学习LLM、LVM、VLM、MLLM基础知识和实现原理，掌握技术原理和适用升级的业务域。</li>
+				<li>制定公安交管行业落地路线和技术选型，多方式微调，解决大模型幻觉，实现初步落地应用。</li>
+			</ul>
+		</div>
+		<div class="case-label"><span class="case-badge">R</span>成果</div>
+		<div>
+		  构建第一个公安交管领域的知识库管理平台，舆情分析对比NLP等方案<strong>准确率提升15%。</strong>
+		  语音接处警对FunASR模型精调，识别准确率基本维持在83%左右，对比基础模型<strong>提升了14%左右。</strong>
+		</div>
+	  </div>
+	</div>
+
+  </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts-wordcloud/dist/echarts-wordcloud.min.js"></script>
+
+<script>
+var chart = echarts.init(document.getElementById('skillRadar'));
+var option = {
+  tooltip: {},
+  radar: {
+    indicator: [
+      { name: '高效执行', max: 10 },
+	  { name: '持续学习', max: 10 },
+      { name: '解决问题', max: 10 },
+	  { name: '团队管理', max: 10 },
+      { name: '沟通协作', max: 10 },
+      { name: '创新能力', max: 10 },
+    ]
+  },
+  series: [{
+    type: 'radar',
+    data: [
+      {
+        value: [10, 8, 10, 7, 9, 9],
+        name: '能力值',
+		areaStyle: { color: 'rgba(37,99,235,0.2)' },   // 半透明蓝色区域
+		lineStyle: { color: '#2563eb', width: 2 },      // 线条加粗
+		itemStyle: { color: '#2563eb' }                 // 节点颜色
+      }
+    ]
+  }]
+};
+chart.setOption(option);
+</script>
+<script>
+var chart = echarts.init(document.getElementById('skillWordCloud'));
+
+var option = {
+  tooltip: {},
+  series: [{
+    type: 'wordCloud',
+    shape: 'circle',       // 形状：circle / cardioid / diamond / star
+    gridSize: 8,           // 单词间距
+    sizeRange: [14, 40],   // 字体大小范围
+    rotationRange: [0, 0], // 不旋转，保持水平
+    textStyle: {
+      color: function () {
+        const colors = ['#2563eb','#e11d48','#059669','#7c3aed','#ea580c','#0d9488'];
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+    },
+    data: [
+		  { name: '平台微服务架构', value: 140 }, 
+		  { name: '大数据架构', value: 130 }, 
+		  { name: 'Java', value: 100 },        
+		  { name: 'SpringCloud', value: 80 }, 
+		  { name: 'Python', value: 80 },
+		  { name: 'MyBatis', value: 75 },
+		  
+		  { name: 'MySQL', value: 70 },
+		  { name: 'Redis', value: 65 },
+		  { name: 'PostgreSQL', value: 50 },
+
+		  { name: 'Maven', value: 55 },
+		  { name: 'Git', value: 55 },
+		  
+		  { name: 'Kafka', value: 65 },
+		  { name: 'Nginx', value: 65 },
+		  { name: 'Nacos', value: 65 },
+		  { name: 'CAS', value: 50 },
+		  
+		  { name: 'Flink', value: 40 },
+		  { name: 'Doris', value: 40 },
+
+		  { name: 'Selenium', value: 50 },
+		  { name: 'SonarQube', value: 50 },
+		  
+		  { name: 'Linux', value: 75 },
+		  { name: 'Hyper-V', value: 40 },
+		  { name: 'Docker', value: 65 },
+		  
+		  { name: 'html', value: 35 },
+		  { name: 'js', value: 35 }
+	]
+  }]
+};
+
+chart.setOption(option);
+</script>
+
+</body>
+
+
+</html>
