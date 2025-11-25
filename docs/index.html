@@ -17,7 +17,7 @@
 
 .page {
   width: 210mm;
-  height: 345mm;
+  height: 297mm;
   margin: auto;
   padding: 10mm;   /* 控制内边距 */
   background: #fff;
@@ -278,7 +278,6 @@ ul.inline-list {
         <h1>王成龙</h1>
         <div class="meta">
 		  <i class="fa-solid fa-cake-candles" ></i> 1989年10月 ·
-		  <i class="fa-solid fa fa-mars"></i>男 ·
 		  <i class="fa-solid fa-envelope"></i>342621891@qq.com ·
 		  <i class="fa-solid fa-phone"></i> 159 6421 1862 ·
 		  <i class="fa-solid fa-briefcase"></i> 12年工作经验 ·
@@ -338,22 +337,24 @@ ul.inline-list {
 		  </div>
 		  <div class="job-field">涉及ToG业务领域：智慧交通 · 公共安全 · 智慧安防</div>
 		  <ul>	
-			<li><strong>作为平台软件架构师，</strong> 负责海信实战平台系列产品整体架构工作，包括
+			<li><strong>作为平台软件架构师和产品部长，</strong> 架构
 				<strong title="车辆大数据平台、视频大数据平台、侦查平台、防控平台、安防小区平台、全息感知平台、视频图像综合应用平台、数字证书监管平台、大模型训练平台、122接警助手">
-					10余个大中型软件产品
-				</strong>的架构设计、数据流设计、业务流设计、数据库设计及分布式API网关设计，负责产品在
+					10余个大中型平台软件产品</strong>，和
+					<strong title="公安云脑、视图库、可视化数据建模、跨网数据交管、数据态势监控">5个公安大数据中大型平台软件
+				</strong>
+					包括数据流设计、业务流设计、数据库设计及分布式API网关设计，负责产品在
 				<strong title="北京、天津、青岛、烟台、潍坊、镇江、长沙、桂林、贵阳、武汉、通辽">
 					16个地市</strong>
 					实战落地。
 			</li>
-			<li><strong>作为公安产品部长，</strong> 负责海信智慧公安产品的架构设计工作，采用Spark+Flink+Doris+ES的主流架构，规划架构并开发了
+			<!-- <li><strong>作为公安产品部长，</strong> 负责海信智慧公安产品的架构设计工作，采用Spark+Flink+Doris+ES的主流架构，规划架构并开发了
 				<strong title="公安云脑、视图库、可视化数据建模、跨网数据交管、数据态势监控">5个公安大数据中大型平台软件
 				</strong>。负责产品在10余个城市落地验证。
-			</li>
-			<li><strong>作为公安交管研发总监，</strong> 负责公安交管大模型研发工作，架构行业知识库平台，
-				<strong>构建公安交管行业垂域大语言模型；</strong> 引入视觉大模型，<strong>解决道路交通事件发现泛化不足，准确率低的问题；</strong>
+			</li> -->
+			<li><strong>作为公安交管研发总监，</strong> 负责公安交管大模型研发工作，
+				<strong>架构行业垂域大语言模型；</strong> 引入视觉大模型，<strong>解决道路交通事件发现泛化不足，准确率低的问题；</strong>
 				通过多模态数据特征对齐，<strong>实现数据融合及复杂业务决策推理。</strong>
-				</li>
+			</li>
 		  </ul>
 		  <div class="chips">
 			<span class="chip">公司优秀员工</span>
@@ -375,11 +376,11 @@ ul.inline-list {
 				参与开发
 				<strong title="日志分析系统、话单稽核系统、话费稽查系统、数据监控系统">
 					4个大型软件产品</strong>
-				<strong>完成十万条/秒并发量</strong>下的话单实时计算、指标分析，基于Spark计算引擎
+				<strong>完成十万条/秒并发量</strong>下的话单实时计算、指标分析，
 				<strong>实现百亿级话单、账管数据分析，支撑全国话单出账。</strong>
 			</li>
 			<li><strong>作为大数据架构师，</strong> 基于Storm+ES+Kafka+Redis，采用Prometheus+Kibana，
-				架构设计开发了，全国计费全流程监控分析系统，具备批处理通道的一键启动，还原，核心指标的深度监控和问题排查功能，
+				架构设计开发全国计费全流程监控分析系统，
 				<strong>实现49大类监控历程和1780个监控指标项，实时检测1.3亿用户的数据流状态和异常。</strong>
 			</li>
 		  </ul>
@@ -403,12 +404,11 @@ ul.inline-list {
 		  <span>奖项证明</span>
 		</h2>
         <div class="block">
-		<ul>
-		  <li>2025年 山东省科技进步二等奖(3/10)</li>
-		  <li>2025年 青岛市科技进步二等奖(2/10)</li>
-		  <li>2023年 中国电子学会科技进步二等奖(4/10)</li>
-		  <li>2022年 公安部揭榜挂帅项目一等奖</li>
-		  <li>海信集团科技科技创新提案2项</li>
+		<ul class="inline-list">
+		  <li>山东省科技进步二等奖</li>
+		  <li>青岛市科技进步二等奖</li>
+		  <li>电子学会科技进步二等奖</li>
+		  <li>海信集团创新提案2项</li>
 		</ul>
 		
         </div>
@@ -431,7 +431,7 @@ ul.inline-list {
 	  <div class="case-grid">
 		<div class="case-label"><span class="case-badge">S</span>背景</div>
 		<div>
-			面临第三方服务众多，业务平台反复开发，代码不一致性导致的缺陷问题排查困难，导致项目交付质量受限周期长，成本高
+			第三方服务众多，业务平台反复开发，代码不一致性导致的缺陷问题排查困难，项目交付质量受限周期长，成本高
 		</div>
 		<div class="case-label"><span class="case-badge">T</span>任务</div>
 		<div>
@@ -477,7 +477,6 @@ ul.inline-list {
 		</div>
 		<div class="case-label"><span class="case-badge">R</span>成果</div>
 		<div>
-			日均亿级数据量下，实现广告牌的精准识别，解除项目障碍；
 			单项目节省<strong>20万</strong>的训练和算法成本；
 			通过持续模型训练，检测准确率<strong>达到99%，</strong>漏检率控制在<strong>3%以内。</strong>
 		</div>
@@ -494,7 +493,7 @@ ul.inline-list {
 	  <div class="case-grid">
 		<div class="case-label"><span class="case-badge">S</span>背景</div>
 		<div>
-			软件架构全面升级，由单业务系统升级到“基础能力层 + 业务层”的全微服务架构，部署调试成本显著增高，开发效率降低
+			软件架构全面升级，由单业务系统升级到全微服务架构，部署调试成本显著增高，开发效率降低
 		</div>
 		<div class="case-label"><span class="case-badge">T</span>任务</div>
 		<div>
@@ -566,14 +565,12 @@ ul.inline-list {
 		<div>
 			<ul style="margin:0; padding-left:18px;">
 				<li>快速学习LLM、LVM、VLM、MLLM基础知识和实现原理，掌握技术原理和适用升级的业务域。</li>
-				<li>辨识通用大模型和行业模型落地的差异，制定公安交管行业落地路线和技术选型。</li>
-				<li>搭建行业知识库自动化数据采集、推理思维链固化大模型思维流程。</li>
-				<li>多方式微调，解决大模型幻觉，实现初步落地应用。</li>
+				<li>制定公安交管行业落地路线和技术选型，多方式微调，解决大模型幻觉，实现初步落地应用。</li>
 			</ul>
 		</div>
 		<div class="case-label"><span class="case-badge">R</span>成果</div>
 		<div>
-		  构建第一个公安交管领域的知识库管理平台，具备多类型文件智能分片向量存储检索；舆情分析对比NLP等方案<strong>准确率提升15%。</strong>
+		  构建第一个公安交管领域的知识库管理平台，舆情分析对比NLP等方案<strong>准确率提升15%。</strong>
 		  语音接处警对FunASR模型精调，识别准确率基本维持在83%左右，对比基础模型<strong>提升了14%左右。</strong>
 		</div>
 	  </div>
